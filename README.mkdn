@@ -21,7 +21,7 @@
 
     $ dzil new -p silex My::Awesome::Module
 
-릴리스 가지와 개발 가지를 분리하기 위해 git-flow를 이용해 기본 설정을 적용합니다.
+릴리스 가지와 개발 가지를 분리하기 위해 `git-flow`를 이용해 기본 설정을 적용합니다.
 
     $ git flow init
     Which branch should be used for bringing forth production releases?
