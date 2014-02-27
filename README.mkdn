@@ -1,0 +1,44 @@
+# Dist::Zilla 설정
+
+`~/dzil/config.ini` 파일을 생성합니다.
+
+    $ dzil setup
+    What's your name?  : 김도형 - Keedi Kim
+    What's your email address?  : keedi@cpan.org
+    Who, by default, holds the copyright on your code?  [Keedi Kim]:
+    What license will you use by default (Perl_5, BSD, etc.)?  [Perl_5]:
+    Do you want to enter your PAUSE account details?  [y/N]:
+    config.ini file created!
+
+`~/dzil/profiles/silex` 디렉터리 하부에 저장소의 `silex` 경로를 심볼릭 링크로 걸어줍니다.
+
+    $ cd ~/.dzil/profiles
+    $ ln -sf $PRJOECT_ROOT/silex
+
+# 모듈 생성
+
+다음 명령으로 모듈을 생성합니다.
+
+    $ dzil new -p silex My::Awesome::Module
+
+릴리스 가지와 개발 가지를 분리하기 위해 git-flow를 이용해 기본 설정을 적용합니다.
+
+    $ git flow init
+    Which branch should be used for bringing forth production releases?
+      - master
+    Branch name for production releases: [master]
+    Branch name for "next release" development: [develop]
+
+    How to name your supporting branch prefixes?
+    Feature branches? [feature/]
+    Release branches? [release/]
+    Hotfix branches? [hotfix/]
+    Support branches? [support/]
+    Version tag prefix? [] v
+    Hooks and filters directory? [.git/hooks]
+
+원격 저장소를 등록하고 서버에 업로드합니다.
+
+    $ git remote add origin git@gitserver.com:foo/bar/my-awesome-module.git
+    $ git push -u origin master
+    $ git push -u origin develop
