@@ -1,6 +1,6 @@
 # Dist::Zilla 설정
 
-`~/dzil/config.ini` 파일을 생성합니다.
+`~/.dzil/config.ini` 파일을 생성합니다.
 
     $ dzil setup
     What's your name?  : 김도형 - Keedi Kim
@@ -10,7 +10,7 @@
     Do you want to enter your PAUSE account details?  [y/N]:
     config.ini file created!
 
-`~/dzil/profiles/silex` 디렉터리 하부에 저장소의 `silex` 경로를 심볼릭 링크로 걸어줍니다.
+`~/.dzil/profiles/silex` 디렉터리 하부에 저장소의 `silex` 경로를 심볼릭 링크로 걸어줍니다.
 
     $ cd ~/.dzil/profiles
     $ ln -sf $PRJOECT_ROOT/silex
